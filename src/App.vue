@@ -1,10 +1,29 @@
 <template>
-  <app-server></app-server>
+  <div class="container">
+    <app-header></app-header>
+    <hr>
+    <div class="rows">
+      <app-servers></app-servers>
+      <app-server-details></app-server-details>
+    </div>
+    <hr>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <script>
-  export default {
+import Header from './components/Shared/Header.vue';
+import Servers from './components/Server/Servers.vue';
+import ServerDetails from './components/Server/ServerDetails.vue';
+import Footer from './components/Shared/Footer.vue';
 
+  export default {
+    components:{
+      'app-header':Header,
+      'app-servers':Servers,
+      'app-server-details':ServerDetails,
+      'app-footer':Footer
+    }
   };
 </script>
 
